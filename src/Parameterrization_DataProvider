@@ -1,0 +1,8 @@
+there are sutiation where we need to run a test cases with different st of data
+
+in such cases we use the annotation DataProviders, 
+
+the method under the dataprovider will return a two dimention object array.
+
+this will be very useful in datadriven framework or key word driven framework..
+ 

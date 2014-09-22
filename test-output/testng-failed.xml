@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Learning Testng - Ant]">
+  <test name="Skip the test example (failed)">
+    <classes>
+      <class name="test.YahooNews">
+        <methods>
+          <include name="beforeTestNews"/>
+        </methods>
+      </class> <!-- test.YahooNews -->
+      <class name="test.YahooTest">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethod"/>
+          <include name="shutDownSelenium"/>
+        </methods>
+      </class> <!-- test.YahooTest -->
+      <class name="test.SkipTestExample">
+        <methods>
+          <include name="SkiptheTest"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- test.SkipTestExample -->
+    </classes>
+  </test> <!-- Skip the test example (failed) -->
+  <test name="Assertion Example(failed)">
+    <classes>
+      <class name="test.YahooNews">
+        <methods>
+          <include name="beforeTestNews"/>
+        </methods>
+      </class> <!-- test.YahooNews -->
+      <class name="test.Assertion_Example">
+        <methods>
+          <include name="AssertionExampleFail"/>
+        </methods>
+      </class> <!-- test.Assertion_Example -->
+      <class name="test.YahooTest">
+        <methods>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+          <include name="beforeSuite"/>
+          <include name="afterMethod"/>
+          <include name="shutDownSelenium"/>
+        </methods>
+      </class> <!-- test.YahooTest -->
+      <class name="test.SkipTestExample">
+        <methods>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- test.SkipTestExample -->
+    </classes>
+  </test> <!-- Assertion Example(failed) -->
+</suite> <!-- Failed suite [Learning Testng - Ant] -->

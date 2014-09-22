@@ -1,0 +1,12 @@
+<suite name = " Listner Example">
+	<listeners>
+		<listener class-name = "Listner.CustomListner"></listener>
+	</listeners>
+	
+	<test name = "Login test">
+		<classes>
+			<class name = "Listner.LoginTest"></class>
+		</classes>
+	</test>
+	
+</suite>

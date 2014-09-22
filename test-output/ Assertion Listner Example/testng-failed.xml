@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ Assertion Listner Example]">
+  <listeners>
+    <listener class-name="Listner.Assertion_Listner"/>
+  </listeners>
+  <test name="Assertion Login test(failed)">
+    <classes>
+      <class name="Listner.Assertion_LoginTest">
+        <methods>
+          <include name="AssertionExampleFail"/>
+        </methods>
+      </class> <!-- Listner.Assertion_LoginTest -->
+    </classes>
+  </test> <!-- Assertion Login test(failed) -->
+</suite> <!-- Failed suite [ Assertion Listner Example] -->

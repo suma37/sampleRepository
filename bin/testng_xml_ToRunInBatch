@@ -1,0 +1,37 @@
+Batch Run
+=========
+to execute multiple test files(.java) we doa batch run 
+
+we need a file called testng.xml to run test in batch 
+
+Configuration in testng.xml
+=============================
+
+1. testng.xml file has some configuration which will tell testng which are the testcases which have to run in a single Batch
+
+2. we can run any numberof test cases
+
+3. the first name in the testng.xml is the Suite name...
+	<suite name = "xyz">
+
+4. the test name in the testng reports will be that given in the testng.xml file <test name = "yahoo news test">
+
+5. in the class we mention the .java files to be executed
+
+		<class name = "packagename.testname">
+		in our example <class name = "Test.YahooTest">
+		
+6. the order of the test that will be the order in which we have mentioned in the testng.xml file.
+
+7. to run the batch file .. Right click on testng.xml -> RunAs ->Testng Suite
+
+8. the order in which the test are mentioned in the testng.xml is the order in which the test are executed.
+
+9. to skip a test : in the method under the annotation @BeforeTest add <throw new SkipException(".....")>  
+
+10. To Skip a Testcase in the test : @Test(enabled=false)
+
+11.To set priority : @Test(Priority = 2) default value id 0 if we do not mention priority it will have default for all the TestCases
+
+
+

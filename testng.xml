@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name = "Learning Testng - Ant">
+
+<test name = "yahoo mail test">
+ 	<classes>
+ 		<class name = "test.YahooTest"></class>
+ 	</classes>
+</test>
+
+<test name = "yahoo news test">
+	<classes>
+		<class name="test.YahooNews"></class>
+	</classes>
+</test>
+
+<test name = "Skip the test example ">
+	<classes>
+		<class name = "test.SkipTestExample"></class>
+	</classes>
+</test>
+
+<test name = "Assertion Example">
+	<classes>
+		<class name = "test.Assertion_Example"></class>
+	</classes>
+</test>
+
+</suite>

@@ -1,0 +1,12 @@
+<suite name = " Assertion Listner Example">
+	<listeners>
+		<listener class-name = "Listner.Assertion_Listner"></listener>
+	</listeners>
+	
+	<test name = "Assertion Login test">
+		<classes>
+			<class name = "Listner.Assertion_LoginTest"></class>
+		</classes>
+	</test>
+	
+</suite>

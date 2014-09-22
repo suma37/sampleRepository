@@ -1,0 +1,56 @@
+ANT: It is used to run programs on Linux/Unix based system or also to run program from cmd prompt.
+
+It is a build and compile tool by Apache.
+
+if we are using Junit we cannot generats report without Ant
+
+Also in Testng to generate some reports we will need Ant.
+
+Build.xml is very important for ANT
+
+we need to place this xml under the project.
+
+build.xml. 
+
+properties( will have properties its the configuration)
+ws.home = $basedir - workspace home $basedir measns the current directory
+ws.jars = "D:\jars" - wher the jarfileare present
+test.dest = ${ws.home}/build Ant will compile and put it under bulid dir under workspace
+test.src = ${ws.home}/src -  where all .java file are located
+ng.reports  = "test-output" where all the testng reported are stored.
+
+
+tragets ( build.xml will also have targets )
+clean - deletes destination dir
+complie - will complie the program
+run - will run the as per the file present in testng.xml
+
+To execute the test 
+===================
+in cmd prompt
+>ant compile ( this will tell ant to complie based on the version of the jdk)
+
+on compiling we will get BUILD SUCCESSFUL message
+on refreshing the project we get a flder build under the project which will have all the .class files
+
+ant clean ( this will delete the build folder)
+
+ant run ( will execute all the test in the testng.xml )
+
+TESTng XSLT reports - these can only be generated with ANT
+==========================================================
+
+1.this will be only generated only if we have the below .jar files
+
+saxon.jar
+saxonLiason.jar
+
+2.create a package xslt under src (build.xml we have mentioned the path of testng-results.xls as style="src/xslt/testng-results.xsl").
+3.place the testng-results.xls in it
+4.cmd> ant testng-xslt-report ( since we have mentiond this in the build.xml <target name="testng-xslt-report"> )
+5. a folder XSLT-REPORT is created (this line in build.xml will create it<mkdir dir="${ws.home}/XSLT_Reports/output"/>)
+   under sub folder output we will have the index.html.
+
+
+
+

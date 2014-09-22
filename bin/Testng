@@ -1,0 +1,62 @@
+Selenium with Testng is more famous beause we get very good reporst, and easier to execute.
+but in market we may find Junit but due to some issues Testng is becoming more famous
+
+Install Testng in eclipse 
+========================
+ 1. in eclipse goto Help -> Install new S/w ( a window will open  name of the window Avaliable S/w) 
+
+2. go to the link "http://testng.org/doc/download.html"
+
+			The content in this page is as below
+
+			For the Eclipse plug-in, we suggest using the update site:
+
+			<Select Help / Software updates / Find and Install.
+			Search for new features to install.
+			New remote site.
+			For Eclipse 3.4 and above, enter http://beust.com/eclipse.
+			For Eclipse 3.3 and below, enter http://beust.com/eclipse1.
+			Make sure the check box next to URL is checked and click Next.
+			Eclipse will then guide you through the process.>
+
+3. copy the http://beust.com/eclipse and past it in the Work With in the Avaliable s/w and click on Next and Next and test ng gets installed.
+
+TO VERIFY if TESTng is istallled or not
+==========================================
+
+go to Window-ShowView->other  now expand Java we can see the plugin Testng ( testng is installed as a plugin in eclpise).
+
+
+why TESTng Used
+================
+Test ng is used for controlling the testcases
+
+there is no public static void main method in Testng  it has somethiong called Annotation . some of the annotation are
+@Test, @DataProvider@BeforeTest etc, etc..... 
+
+once i write @Test, we get a error. on moving the mouse to @Test it gives option Add Testng Library
+
+on clicking that the Testng.jar gets added to the project.
+
+
+Advantages of Testng over Junit.
+=================================
+
+1. Simple the annotations
+easy to parametizer
+running test in parrell is easy.
+testng reporst are more presentable. 
+
+To Create a Testng test class
+==============================
+1. right click on the src or the package
+2. new -> other -> Testng Class
+
+To Run
+======
+right click on the .java file and Run As -> Testng Test
+
+Reports
+========
+1. right click on the project and click on refresh, a folder test-output will be created and the reports present here
+2. click on the index.hhml report.

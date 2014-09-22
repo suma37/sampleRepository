@@ -1,0 +1,18 @@
+Why we need a BAT file
+======================
+
+1. everytime we make some changes we do not wnat to open the cmd promt and type all the cmds to get the
+   reports so we create a BAT file
+   
+How to create a BAT file
+========================
+
+1. open note pad and write the cmds to be executed
+ 
+ cd < path of your project>
+ ant clean compile run testng-xslt-report
+ 
+2. save the file as "MY_TEST.bat" ( remember to give the " " while saving ) 
+ 
+ 
+   

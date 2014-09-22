@@ -1,0 +1,13 @@
+What is Custom Report
+=========================
+
+reports which is only for our project for ex : we want out project name on it, and we do not want to rely on xslt reports
+
+this Process of custom reposrt can be divided in to two parts
+--------------------------------------------------------------
+
+1. we need to know how many tc passed, how many failed, how many skiped
+2. put that information. some format like html.- customizing.
+
+How to write the code to find how many TC passed, Failed, Skipped.
+

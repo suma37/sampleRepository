@@ -1,0 +1,14 @@
+<suite name = "Registration of User">
+	<test name = "Yahoo Registration">
+		<classes>
+			<class name = "Parameterize.YahooRegistration"></class>
+		</classes>
+		
+	</test>
+	
+	<test name = "Gmail Registration">
+	 	<classes>
+	 		<class name = "Parameterize.GmailRegistration"></class>
+	 	</classes>
+	</test>
+</suite>

@@ -1,0 +1,78 @@
+Listner as the name suggest is quitly looks at the code exeution if an event has to be fired after or befor  or during the code execution
+it will be fired
+
+if a test case is executed it can have 3 possible results
+
+Pass
+fail
+skip
+
+we can have listners for logging results
+
+inside the testng framewok we have class TestListnerAdapter. we need this class to invoke Listeners
+
+it has many functoions
+
+getPassedTest()
+getFailedTest();
+getSkippedTest();
+onTestFailure()
+onTestSkipped();
+onTestFAiled(); look in to javadocs for all the list of function.
+
+
+IMP : listener will only be called if the test is run using testng.xml
+----------------------------------------------------------------
+
+Create a Listner class, here in my example it is Assertion_Listners, this calss extends the class TestListnerAdapater and we over
+ride the methods of the TestListnerAdapter.
+
+we need to add the listener tag in the testng.xml
+
+			<listeners>
+				<listener class-name = "Listner.Assertion_Listner"></listener>
+			</listeners>
+			
+Now rightClick on testng_Assertion.xml and click on run as Testng Suite.
+
+so when the test case passes the Listener associated with it will be called automatically by the testng
+
+depending on it passes or skip or fail the corresponding Listener method will be called.
+
+for each and every Testcase listener will be called.
+
+===================================================================================
+Without Listners if a Assertion Fails and if it is caught in the try and catch, the error will be reported
+	 * but the TestCase is shown as Passed . So Listen come for Help. 
+	 * 
+	 There is a Interface called IInvokedMethodListener which has 2 methods
+	 		afterInvocation
+	 		beforeInvocation
+	 
+	 in our class Assertion_Listner (the Listner class) implement this interface IInvokeMethodListner 
+	 		
+	 Write a code in afterInvocation method which can verify if any TestCase Failed or not. so depending on that we can report the Failure
+	  
+	 also we need a .java file called ErrorUtil.java
+	 
+	 * 1. copy the ErrorUtil.java in to package. in our case Listner
+	 * In the catch block we call the function ErrorUtil.addVerificationFailure(Throwable t), this function
+	 * acts like a bag and collects all the Errors. 
+	 * 
+	 * 2.once the test is over the afterInvocation Listner is innovked which it will take all the collected Errors from the ErrorUntil.
+	 * and depending if any errors collected in ErrorUtil.getVerificationFailure the Test is FAILED in the report, 
+	 * if there are no errors collected in the test is PASSED in the report.
+
+
+difference b/w before, after annotation and Listners
+====================================================
+as even afterTest is also called once the Test is executed, then why we need Listeners
+
+1. AfterTest will not know the status of the Test automatically we will have to write some code to know it
+2. if we have multiple Tests( .java file) in a project we will have to have sftertest annotation in each 
+   and every class. but Listner will be in one .jave file	
+   
+To get the name of the Testcase in Listner
+==========================================
+
+
